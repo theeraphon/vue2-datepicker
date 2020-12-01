@@ -13,6 +13,7 @@
   ],
   "version": "3.8.1",
   "scripts": {
+    "prepare": "npm run build",
     "dev": "parcel ./example/dev.html --open --port 2235",
     "build:index": "cross-env NODE_ENV=production rollup -c",
     "build:locale": "cross-env NODE_ENV=production rollup -c rollup.locale.config.js",
