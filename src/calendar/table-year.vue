@@ -94,7 +94,7 @@ export default {
       if (target.tagName.toUpperCase() === 'DIV') {
         target = target.parentNode;
       }
-      const year = target.getAttribute('data-year');
+      const year = target.getAttribute('data-year') - 543;
       if (year) {
         this.$emit('select', parseInt(year, 10));
       }
