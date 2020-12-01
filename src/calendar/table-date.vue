@@ -102,9 +102,13 @@ export default {
     },
     yearMonth() {
       const { yearFormat, monthBeforeYear, monthFormat = 'MMM' } = this.getLocale();
+      const year =
+        this.calendar instanceof Date
+          ? this.calendar.setFullYear(this.calendar.getFullYear() + 543)
+          : this.calendar;
       const yearLabel = {
         panel: 'year',
-        label: this.formatDate(this.calendar, yearFormat),
+        label: this.formatDate(year, yearFormat),
       };
       const monthLabel = {
         panel: 'month',
